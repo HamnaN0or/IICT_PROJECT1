@@ -1,0 +1,146 @@
+/* Custom CSS to match the Glow Guide design */
+
+/* Variables for easy color management */
+:root {
+    --glow-purple-dark: #6a1a9a; /* Or the exact dark purple from the image */
+    --glow-purple-medium: #8a3eb3; /* A medium shade */
+    --glow-purple-light: #b373d8; /* A lighter shade for input fields */
+    --glow-text-color: #5d2595; /* Color for the "Your Glow Starts Here" heading */
+    --white: #ffffff;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a common, readable font */
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* Header/Nav Styles */
+.bg-purple {
+    background-color: var(--glow-purple-dark);
+}
+
+.logo-img {
+    width: 50px; /* Adjust size as needed for the logo */
+    height: 50px;
+    background-color: var(--white); /* Placeholder background */
+    border-radius: 50%;
+}
+
+.navbar-brand span {
+    text-transform: uppercase;
+}
+
+/* Main Login Section Styles */
+.login-main {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.glow-text {
+    color: var(--glow-text-color);
+    font-weight: 700;
+}
+
+/* Custom Input Field Styling to match the purple background */
+.form-group-glow {
+    position: relative;
+    /* This container ensures the whole purple bar is behind the input */
+}
+
+.input-glow {
+    /* Use the light purple background for the input fields */
+    background-color: var(--glow-purple-light);
+    border: none;
+    color: var(--white); /* Text color inside input */
+    padding: 1rem 1.5rem; /* Adjust padding to match height */
+    height: auto; /* Remove fixed Bootstrap height */
+    text-indent: 10px; /* Moves the text slightly right to look like a placeholder is being typed over */
+    font-size: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.input-glow::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Placeholder text color */
+}
+
+/* Hide the label as the placeholder text acts as the label */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Login/Create Links */
+.forgot-link, .remember-link, .create-link {
+    color: var(--glow-purple-dark);
+    font-size: 0.9rem;
+}
+
+.create-link {
+    font-weight: bold;
+}
+
+/* Social Icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+/* Right Side Image Styling */
+.image-aside {
+    background-color: #f7f3fb; /* Light background behind the model/products */
+    overflow: hidden;
+    min-height: 100vh; /* Ensure the image section fills the viewport height */
+    position: relative;
+}
+
+.model-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 90vh; /* Adjust height for visual balance */
+    width: auto;
+}
+
+/* Subscription Banner */
+.subscription-banner {
+    background-color: var(--glow-purple-light);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--glow-purple-medium); /* Slightly different purple for footer */
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    text-decoration: underline !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991.98px) {
+    .login-main {
+        min-height: auto;
+    }
+
+    .login-main .col-lg-6 {
+        min-height: 50vh; /* Ensure login form has enough space on mobile */
+    }
+
+    .model-img {
+        display: none; /* Hide large image on smaller screens */
+    }
+}
